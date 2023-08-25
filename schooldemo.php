@@ -1,6 +1,3 @@
-// can be used for hiding personal info and only give access to targeted persons
-// abstract class, inheritance, access methods
-
 <?php
 
 abstract class teacher_info
