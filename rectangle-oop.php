@@ -13,9 +13,9 @@
 
     <form action="rectangle-oop.php" method="POST">
         <p>Enter Length</p>
-        <input type="number" name="length">
+        <input type="text" name="length">
         <p>Enter Breadth</p>
-        <input type="number" name="breadth">
+        <input type="text" name="breadth">
         <br>
         <input type="submit" value="Calculate" name="Calc">
     </form>
@@ -23,21 +23,25 @@
     <?php
 
     if (isset($_POST['Calc'])) {
-        
-        class Rectangle{
+
+        class Rectangle
+        {
             private $l;
             private $b;
 
-            public function __construct($l, $b){
-                $this -> l = $l;
-                $this -> b = $b;
+            public function __construct($l, $b)
+            {
+                $this->l = $l;
+                $this->b = $b;
             }
 
-            function get_area(){
-                return $area =  $this -> l * $this -> b;
+            function get_area()
+            {
+                return $area = $this->l * $this->b;
             }
-            function get_perimeter(){
-                return $perimeter =  2 * ($this -> l + $this -> b);
+            function get_perimeter()
+            {
+                return $perimeter = 2 * ($this->l + $this->b);
             }
         }
 
@@ -46,9 +50,9 @@
         $b = $_POST["breadth"];
 
         $a = new Rectangle($l, $b);
-        
-        echo "The area of rectangle is ".$a->get_area()." and the perimeter is ".$a->get_perimeter();
-       
+
+        echo "The area of rectangle is " . $a->get_area() . " and the perimeter is " . $a->get_perimeter();
+
     }
 
     ?>
